@@ -42,16 +42,16 @@
             <!-- Left Toolbar -->
             <aside class="toolbar">
                 <div class="toolbar-section">
-                    <button id="btn-back" class="btn btn-back">← Retour</button>
+                    <button type="button" id="btn-back" class="btn btn-back">← Retour</button>
                 </div>
 
                 <div class="toolbar-section">
                     <span class="section-label">Outils</span>
                     <div class="tool-group">
-                        <button class="btn tool-btn active" data-tool="pencil" title="Crayon (P)">✏️</button>
-                        <button class="btn tool-btn" data-tool="eraser" title="Gomme (E)">🧹</button>
-                        <button class="btn tool-btn" data-tool="fill" title="Remplissage (F)">🪣</button>
-                        <button class="btn tool-btn" data-tool="picker" title="Pipette (I)">💧</button>
+                        <button type="button" class="btn tool-btn active" data-tool="pencil" title="Crayon (P)">✏️</button>
+                        <button type="button" class="btn tool-btn" data-tool="eraser" title="Gomme (E)">🧹</button>
+                        <button type="button" class="btn tool-btn" data-tool="fill" title="Remplissage (F)">🪣</button>
+                        <button type="button" class="btn tool-btn" data-tool="picker" title="Pipette (I)">💧</button>
                     </div>
                 </div>
 
@@ -84,13 +84,13 @@
 
                 <div class="toolbar-section">
                     <span class="section-label">Actions</span>
-                    <button id="btn-upload" class="btn action-btn">📤 Importer image</button>
-                    <button id="btn-undo" class="btn action-btn">↩️ Annuler</button>
-                    <button id="btn-clear" class="btn action-btn">🗑️ Tout effacer</button>
+                    <button type="button" id="btn-upload" class="btn action-btn">📤 Importer image</button>
+                    <button type="button" id="btn-undo" class="btn action-btn">↩️ Annuler</button>
+                    <button type="button" id="btn-clear" class="btn action-btn">🗑️ Tout effacer</button>
                 </div>
 
                 <div class="toolbar-section">
-                    <button id="btn-download" class="btn download-btn">💾 Télécharger PNG</button>
+                    <button type="button" id="btn-download" class="btn download-btn">💾 Télécharger PNG</button>
                 </div>
             </aside>
 
@@ -106,11 +106,11 @@
                     <canvas id="display-canvas"></canvas>
                 </div>
                 <div class="canvas-legend">
-                    <span class="legend-item"><span class="legend-dot" style="background:#3b82f6"></span>Avant</span>
-                    <span class="legend-item"><span class="legend-dot" style="background:#fb923c"></span>Arrière</span>
-                    <span class="legend-item"><span class="legend-dot" style="background:#4ade80"></span>Haut</span>
-                    <span class="legend-item"><span class="legend-dot" style="background:#a855f7"></span>Bas</span>
-                    <span class="legend-item"><span class="legend-dot" style="background:#facc15"></span>Côtés</span>
+                    <span class="legend-item"><span class="legend-dot legend-front"></span>Avant</span>
+                    <span class="legend-item"><span class="legend-dot legend-back"></span>Arrière</span>
+                    <span class="legend-item"><span class="legend-dot legend-top"></span>Haut</span>
+                    <span class="legend-item"><span class="legend-dot legend-bottom"></span>Bas</span>
+                    <span class="legend-item"><span class="legend-dot legend-side"></span>Côtés</span>
                 </div>
             </main>
         </div>

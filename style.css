@@ -405,6 +405,12 @@ html, body {
     display: inline-block;
 }
 
+.legend-front  { background: var(--blue); }
+.legend-back   { background: var(--orange); }
+.legend-top    { background: var(--green); }
+.legend-bottom { background: var(--purple); }
+.legend-side   { background: var(--yellow); }
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
     .size-grid {
