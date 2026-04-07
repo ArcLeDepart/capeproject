@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Cape Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Size Selection Screen -->
+    <div id="selection-screen" class="screen active">
+        <div class="selection-container">
+            <div class="logo-section">
+                <h1>⚔️ Minecraft Cape Creator</h1>
+                <p class="subtitle">Créez et personnalisez votre propre cape Minecraft</p>
+            </div>
+            <h2>Choisissez un format de texture</h2>
+            <div class="size-grid">
+                <div class="size-card" data-scale="8">
+                    <div class="card-icon">👑</div>
+                    <h3>512 × 256</h3>
+                    <p>Haute résolution (8×)</p>
+                    <span class="card-badge">Recommandé</span>
+                </div>
+                <div class="size-card" data-scale="4">
+                    <div class="card-icon">⭐</div>
+                    <h3>256 × 128</h3>
+                    <p>Résolution moyenne (4×)</p>
+                </div>
+                <div class="size-card" data-scale="2">
+                    <div class="card-icon">🔷</div>
+                    <h3>128 × 64</h3>
+                    <p>Résolution standard (2×)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Editor Screen -->
+    <div id="editor-screen" class="screen">
+        <div class="editor-layout">
+            <!-- Left Toolbar -->
+            <aside class="toolbar">
+                <div class="toolbar-section">
+                    <button type="button" id="btn-back" class="btn btn-back">← Retour</button>
+                </div>
+
+                <div class="toolbar-section">
+                    <span class="section-label">Outils</span>
+                    <div class="tool-group">
+                        <button type="button" class="btn tool-btn active" data-tool="pencil" title="Crayon (P)">✏️</button>
+                        <button type="button" class="btn tool-btn" data-tool="eraser" title="Gomme (E)">🧹</button>
+                        <button type="button" class="btn tool-btn" data-tool="fill" title="Remplissage (F)">🪣</button>
+                        <button type="button" class="btn tool-btn" data-tool="picker" title="Pipette (I)">💧</button>
+                    </div>
+                </div>
+
+                <div class="toolbar-section">
+                    <span class="section-label">Couleur</span>
+                    <div class="color-row">
+                        <input type="color" id="color-input" value="#ff0000">
+                        <div id="color-preview"></div>
+                    </div>
+                    <div class="color-presets" id="color-presets"></div>
+                </div>
+
+                <div class="toolbar-section">
+                    <span class="section-label">Taille du pinceau</span>
+                    <div class="brush-row">
+                        <input type="range" id="brush-size" min="1" max="8" value="1">
+                        <span id="brush-size-label">1</span>
+                    </div>
+                </div>
+
+                <div class="toolbar-section">
+                    <span class="section-label">Affichage</span>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="toggle-grid" checked> Grille
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="toggle-overlay" checked> Zones
+                    </label>
+                </div>
+
+                <div class="toolbar-section">
+                    <span class="section-label">Actions</span>
+                    <button type="button" id="btn-upload" class="btn action-btn">📤 Importer image</button>
+                    <button type="button" id="btn-undo" class="btn action-btn">↩️ Annuler</button>
+                    <button type="button" id="btn-clear" class="btn action-btn">🗑️ Tout effacer</button>
+                </div>
+
+                <div class="toolbar-section">
+                    <button type="button" id="btn-download" class="btn download-btn">💾 Télécharger PNG</button>
+                </div>
+            </aside>
+
+            <!-- Main Canvas Area -->
+            <main class="canvas-area">
+                <div class="canvas-header">
+                    <span id="info-size">-</span>
+                    <span id="info-pos">Position: -, -</span>
+                    <span id="info-face">Zone: -</span>
+                    <span id="info-zoom">Zoom: -</span>
+                </div>
+                <div class="canvas-scroll" id="canvas-scroll">
+                    <canvas id="display-canvas"></canvas>
+                </div>
+                <div class="canvas-legend">
+                    <span class="legend-item"><span class="legend-dot legend-front"></span>Avant</span>
+                    <span class="legend-item"><span class="legend-dot legend-back"></span>Arrière</span>
+                    <span class="legend-item"><span class="legend-dot legend-top"></span>Haut</span>
+                    <span class="legend-item"><span class="legend-dot legend-bottom"></span>Bas</span>
+                    <span class="legend-item"><span class="legend-dot legend-side"></span>Côtés</span>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <input type="file" id="file-input" accept="image/*" hidden>
+    <script src="script.js"></script>
+</body>
+</html>
