@@ -31,8 +31,8 @@ const FACE_COLORS = {
 };
 
 const FACE_LABELS = {
-    top: 'Haut', bottom: 'Bas', left: 'G',
-    front: 'Avant', right: 'D', back: 'Arrière',
+    top: 'Haut', bottom: 'Bas', left: 'Gauche',
+    front: 'Avant', right: 'Droite', back: 'Arrière',
 };
 
 const PRESET_COLORS = [
